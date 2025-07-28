@@ -1,0 +1,10 @@
+export { DocumentIcon } from "./Document.icon";
+export { EditIcon } from "./Edit.icon";
+export { SuccessSentIcon } from "./SuccessSent.icon";
+export { CopyTextIcon } from "./CopyText.icon";
+export { PdfIcon } from "./Pdf.icon";
+export { TrashIcon } from "./Trash.icon";
+export { BooksIcon } from "./Books.icon";
+export { PeopleIcon } from "./People.icon";
+export { LightningIcon } from "./Lightning.icon";
+export { SparklesIcon } from "./Sparkles.icon";
