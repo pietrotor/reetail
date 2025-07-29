@@ -3,16 +3,23 @@ import { Link } from "react-router";
 
 import Table from "@/components/table";
 
-// Mapeo de estilos para el badge de estado
-const statusBadgeVariants = {
+export const statusBadgeVariants = {
   variants: {
-    Disponible: {
-      className: "bg-[#1BD1331A] text-[#1BD133]",
-      text: "Disponible",
+    Recibido: {
+      className: "bg-[#EFEFEF] text-[#7D7D7D]",
+      text: "Recibido",
     },
-    "Sin stock": {
-      className: "bg-[#DD214F26] text-[#DD214F]",
-      text: "Sin stock",
+    "En curso": {
+      className: "bg-[#FFEBCC] text-[#FFAA00]",
+      text: "En curso",
+    },
+    Entregado: {
+      className: "bg-[#DAFBEA] text-[#1BD133]",
+      text: "Entregado",
+    },
+    Rechazado: {
+      className: "bg-[#FDE2E1] text-[#DD214F]",
+      text: "Rechazado",
     },
   },
   size: {
@@ -43,7 +50,7 @@ function LocalStatusBadge({
   );
 }
 
-// Mock data
+// Mock data de pedidos
 type OrderRow = {
   orderCode: string;
   products: { name: string; quantity: number; image: string }[];
@@ -73,30 +80,30 @@ const mockData: OrderRow[] = [
       name: "Supermercado Viva",
       logo: "https://img.freepik.com/vector-premium/logotipo-supermercado_23-2148459011.jpg",
     },
-    status: "Disponible",
+    status: "Recibido",
     id: "1",
   },
   {
     orderCode: "PED-010002",
     products: [
       {
-        name: "Huevos (12 un.)",
+        name: "Huevos (12)",
         quantity: 1,
         image:
-          "https://static01.nyt.com/images/2024/05/29/dining/20EGGS1-esp/20EGGS1-articleLarge.jpg?quality=75&auto=webp&disable=upscale",
+          "https://static01.nyt.com/images/2024/05/29/dining/20EGGS1-esp/20EGGS1-articleLarge.jpg",
       },
       {
         name: "Aceite de oliva 500ml",
         quantity: 1,
         image:
-          "https://icnorteb2c.vteximg.com.br/arquivos/ids/156877-600-600/Aceite-de-Oliva-Virgen-Extra-Carbonell-500-Ml-1-662.jpg?v=637369073915500000",
+          "https://icnorteb2c.vteximg.com.br/arquivos/ids/156877-600-600/Aceite-de-Oliva-Virgen-Extra-Carbonell-500-Ml-1-662.jpg",
       },
     ],
     retailer: {
       name: "Mercado Central",
       logo: "https://i.pinimg.com/736x/d6/6d/38/d66d38c2c59118fa58055ff0436c9fc2.jpg",
     },
-    status: "Sin stock",
+    status: "En curso",
     id: "2",
   },
   {
@@ -117,9 +124,9 @@ const mockData: OrderRow[] = [
     ],
     retailer: {
       name: "Abarrotes Morales",
-      logo: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/supermarket-grocery-logo-design-template-e43b99901aa11fad8aa024c3a84b0d2f_screen.jpg?ts=1734421227",
+      logo: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/supermarket-grocery-logo-design-template-e43b99901aa11fad8aa024c3a84b0d2f_screen.jpg",
     },
-    status: "Disponible",
+    status: "Entregado",
     id: "3",
   },
   {
@@ -136,7 +143,7 @@ const mockData: OrderRow[] = [
       name: "Tienda Saludable",
       logo: "https://www.shutterstock.com/image-vector/supermarket-logo-fruit-inside-shopping-260nw-2446378847.jpg",
     },
-    status: "Disponible",
+    status: "Rechazado",
     id: "4",
   },
   {
@@ -159,7 +166,7 @@ const mockData: OrderRow[] = [
       name: "Café&Co",
       logo: "https://marketplace.canva.com/EAF5V9i5G5g/1/0/1600w/canva-logotipo-cafeter%C3%ADa-figurativo-caf%C3%A9-y-beige-rxcvtLtKSx8.jpg",
     },
-    status: "Sin stock",
+    status: "Recibido",
     id: "5",
   },
 ];

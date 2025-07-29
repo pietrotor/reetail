@@ -22,7 +22,7 @@ export default function AppSidebar() {
           src={currentIcon}
           alt="current logo"
           className="mx-auto"
-          width={180}
+          width={150}
           height={21.63}
         />
       </SidebarHeader>

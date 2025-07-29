@@ -19,13 +19,13 @@ export const PaymentTerms = () => {
             <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
               <Card className="min-w-[310px] gap-10 p-4 shadow-xl">
                 <CardFooter className="justify-between">
-                  <p>Pedidos Disponibles</p>
-                  <p className="text-2xl">3</p>
+                  <p>Pedidos Entregados</p>
+                  <p className="text-2xl">1</p>
                 </CardFooter>
               </Card>
               <Card className="min-w-[310px] gap-10 p-4 shadow-xl">
                 <CardFooter className="justify-between">
-                  <p>Pedidos sin Stock</p>
+                  <p>Pedidos sin procesar</p>
                   <p className="text-2xl">2</p>
                 </CardFooter>
               </Card>

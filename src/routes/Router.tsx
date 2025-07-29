@@ -9,6 +9,7 @@ import { Success } from "@/modules/client-sign-up/components/Success";
 import { Dashboard } from "@/modules/dashboard/Dashboard";
 import { PaymentDetail } from "@/modules/payment-detail";
 import { PaymentTerms } from "@/modules/payment-terms";
+import { DistribucionPage } from "@/modules/payment-terms/routes/DistribucionPage";
 import { ProductsPage } from "@/modules/payment-terms/routes/ProductsPage";
 import { Plaid } from "@/modules/plaid/Plaid";
 import Signup from "@/modules/sign-up/Signup";
@@ -61,6 +62,16 @@ export const Router = createBrowserRouter([
           {
             index: true,
             element: <ProductsPage />,
+          },
+        ],
+      },
+      {
+        path: "/distribucion",
+        element: <Outlet />,
+        children: [
+          {
+            index: true,
+            element: <DistribucionPage />,
           },
         ],
       },

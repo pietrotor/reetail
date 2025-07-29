@@ -16,7 +16,7 @@ type sidebarOption =
   | "Pedidos"
   | "Productos"
   | "Integrations"
-  | "Entregas";
+  | "Distribución";
 
 const AppSidebarMenu = () => {
   const navigate = useNavigate();
@@ -51,8 +51,8 @@ const AppSidebarMenu = () => {
         icon: ShoppingBagIcon,
       },
       {
-        title: "Entregas",
-        url: "/entregas",
+        title: "Distribución",
+        url: "/distribucion",
         disabled: true,
         icon: Truck,
       },
