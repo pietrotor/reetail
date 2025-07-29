@@ -1,8 +1,6 @@
 import { ArrowUpRight, CircleUserRound } from "lucide-react";
 import { useNavigate } from "react-router";
 
-import BalanceCard from "./balance-card";
-import SearchBar from "./searchbar";
 import AppSidebarMenu from "./sidebar-menu";
 import { Separator } from "./ui/separator";
 import {
@@ -14,11 +12,9 @@ import {
 
 import HelpIcon from "@/assets/icons/help-icon";
 import SettingsIcon from "@/assets/icons/setting-icon";
-import currentIcon from "@/assets/images/currentLogo.png";
-import { useCurrentUserStore } from "@/store/use-current-user";
+import currentIcon from "@/assets/images/Logo-reeteil-Celeste.png";
 
 export default function AppSidebar() {
-  const { isClient } = useCurrentUserStore();
   const navigate = useNavigate();
 
   return (
@@ -34,8 +30,6 @@ export default function AppSidebar() {
           width={180}
           height={21.63}
         />
-        {!isClient && <BalanceCard />}
-        <SearchBar className="text-sm" placeholder="Search..." />
       </SidebarHeader>
       <Separator />
       <SidebarContent>
@@ -46,32 +40,10 @@ export default function AppSidebar() {
         <div className="flex justify-between border p-2 rounded-lg">
           <div className="flex gap-2">
             <CircleUserRound />
-            <span>ivan@artasaka.com</span>
+            <span>abidan@reeteil.com</span>
           </div>
           <ArrowUpRight />
         </div>
-        {[
-          {
-            label: "Settings",
-            url: "/settings",
-            icon: SettingsIcon,
-          },
-          {
-            label: "Help Center",
-            icon: HelpIcon,
-          },
-        ].map((item) => (
-          <div
-            key={item.label}
-            className="flex gap-2 items-center cursor-pointer"
-            onClick={() => {
-              if (item.url) navigate(item.url);
-            }}
-          >
-            <item.icon className="sidebar-icon" />
-            <span>{item.label}</span>
-          </div>
-        ))}
       </SidebarFooter>
     </Sidebar>
   );

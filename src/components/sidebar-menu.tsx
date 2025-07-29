@@ -3,7 +3,12 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@radix-ui/react-collapsible";
-import { NotepadTextDashed, ReceiptCent, Timer } from "lucide-react";
+import {
+  NotepadTextDashed,
+  ReceiptCent,
+  ShoppingBagIcon,
+  Timer,
+} from "lucide-react";
 import { useMemo } from "react";
 import { useLocation, useNavigate } from "react-router";
 
@@ -14,7 +19,7 @@ import InvoiceIcon from "@/assets/icons/invoice-icon";
 import { cn } from "@/lib/utils";
 import { useCurrentUserStore } from "@/store/use-current-user";
 
-type sidebarOption = "Overview" | "PaymentTerms" | "Invoices" | "Integrations";
+type sidebarOption = "Dashboard" | "Pedidos" | "Productos" | "Integrations";
 
 const AppSidebarMenu = () => {
   const { isClient } = useCurrentUserStore();
@@ -34,45 +39,20 @@ const AppSidebarMenu = () => {
   }[] = useMemo(
     () => [
       {
-        title: "Overview",
+        title: "Dashboard",
         url: "/dashboard",
         icon: GridIcon,
       },
       {
-        title: "PaymentTerms",
-        url: "/payment-terms",
+        title: "Pedidos",
+        url: "/pedidos",
         icon: ContractClipIcon,
       },
       {
-        title: "Invoices",
-        icon: InvoiceIcon,
-        options: [
-          {
-            title: "Paid",
-            url: "#",
-            icon: ReceiptCent,
-          },
-          {
-            title: "Pending",
-            url: "#",
-            icon: Timer,
-          },
-          {
-            title: "Drafts",
-            url: "#",
-            icon: NotepadTextDashed,
-          },
-        ],
+        title: "Productos",
+        url: "/productos",
+        icon: ShoppingBagIcon,
       },
-      ...(!isClient
-        ? [
-            {
-              title: "Integrations" as sidebarOption,
-              url: "#",
-              icon: IntegrationIcon,
-            },
-          ]
-        : []),
     ],
     []
   );

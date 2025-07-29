@@ -16,6 +16,7 @@ import Signup from "@/modules/sign-up/Signup";
 import SignUpForm from "@/modules/sign-up/SignUpForm";
 import VerifyEmailPage from "@/modules/sign-up/VerifyEmailPage";
 import { SignIn } from "@/modules/signIn/SignIn";
+import { ProductsPage } from "@/modules/payment-terms/routes/ProductsPage";
 
 export const Router = createBrowserRouter([
   {
@@ -46,8 +47,8 @@ export const Router = createBrowserRouter([
         ],
       },
       {
-        path: "/payment-terms",
-        element: <AuthRoute />,
+        path: "/pedidos",
+        element: <Outlet />,
         children: [
           {
             index: true,
@@ -56,12 +57,12 @@ export const Router = createBrowserRouter([
         ],
       },
       {
-        path: "/settings",
-        element: <AuthRoute />,
+        path: "/productos",
+        element: <Outlet />,
         children: [
           {
             index: true,
-            element: <SettingsPage />,
+            element: <ProductsPage />,
           },
         ],
       },
