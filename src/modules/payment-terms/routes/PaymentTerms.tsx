@@ -25,7 +25,7 @@ export const PaymentTerms = () => {
               </Card>
               <Card className="min-w-[310px] gap-10 p-4 shadow-xl">
                 <CardFooter className="justify-between">
-                  <p>Pedidos sin procesar</p>
+                  <p>Pedidos Recibidos</p>
                   <p className="text-2xl">2</p>
                 </CardFooter>
               </Card>
