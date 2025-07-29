@@ -4,12 +4,16 @@ import { Link } from "react-router";
 import Table from "@/components/table";
 
 // Mapeo de estilos para el badge de estado
-type BadgeStatus = "Disponible" | "Sin stock";
+type BadgeStatus = "Disponible" | "Actualizar stock" | "Sin stock";
 const statusBadgeVariants = {
   variants: {
     Disponible: {
       className: "bg-[#1BD1331A] text-[#1BD133]",
       text: "Disponible",
+    },
+    "Actualizar stock": {
+      className: "bg-[#F5A62726] text-[#F5A627]",
+      text: "Actualizar stock",
     },
     "Sin stock": {
       className: "bg-[#DD214F26] text-[#DD214F]",
@@ -59,7 +63,7 @@ const mockProducts: ProductRow[] = [
       image:
         "https://blog.elamasadero.com/wp-content/uploads/pan_integral_espelta_700.jpg",
     },
-    detalle: "2 unidades",
+    detalle: "20 unidades",
     estado: "Disponible",
     id: "1",
   },
@@ -70,8 +74,8 @@ const mockProducts: ProductRow[] = [
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJcimTHEZ8alehk3EMahrFX97YtQ-LopDnOA&s",
     },
-    detalle: "1 unidad",
-    estado: "Sin stock",
+    detalle: "7 unidades",
+    estado: "Actualizar stock",
     id: "2",
   },
   {
@@ -81,7 +85,7 @@ const mockProducts: ProductRow[] = [
       image:
         "https://static01.nyt.com/images/2024/05/29/dining/20EGGS1-esp/20EGGS1-articleLarge.jpg",
     },
-    detalle: "Caja de 12",
+    detalle: "120 unidades",
     estado: "Disponible",
     id: "3",
   },
@@ -92,7 +96,7 @@ const mockProducts: ProductRow[] = [
       image:
         "https://icnorteb2c.vteximg.com.br/arquivos/ids/156877-600-600/Aceite-de-Oliva-Virgen-Extra-Carbonell-500-Ml-1-662.jpg",
     },
-    detalle: "Botella",
+    detalle: "17 cajas",
     estado: "Disponible",
     id: "4",
   },
@@ -103,9 +107,20 @@ const mockProducts: ProductRow[] = [
       image:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6oTfVlS2C-H5O9L263ige9m3_xlpHXk8tLg&s",
     },
-    detalle: "Paquete 1kg",
-    estado: "Sin stock",
+    detalle: "10 Paquetes",
+    estado: "Actualizar stock",
     id: "5",
+  },
+  {
+    codigo: "PRD-0005",
+    producto: {
+      name: "Harina",
+      image:
+        "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202410/28/00118037900018____7__600x600.jpg",
+    },
+    detalle: "0 paquetes",
+    estado: "Sin stock",
+    id: "6",
   },
 ];
 
