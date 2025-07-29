@@ -1,5 +1,4 @@
 import { CircleHelp } from "lucide-react";
-import { useMemo } from "react";
 import { Area, AreaChart, CartesianGrid, XAxis, YAxis } from "recharts";
 
 import { Card, CardHeader } from "@/components/ui/card";

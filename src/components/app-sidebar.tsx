@@ -1,5 +1,4 @@
 import { ArrowUpRight, CircleUserRound } from "lucide-react";
-import { useNavigate } from "react-router";
 
 import AppSidebarMenu from "./sidebar-menu";
 import { Separator } from "./ui/separator";
@@ -10,13 +9,9 @@ import {
   SidebarHeader,
 } from "./ui/sidebar";
 
-import HelpIcon from "@/assets/icons/help-icon";
-import SettingsIcon from "@/assets/icons/setting-icon";
 import currentIcon from "@/assets/images/Logo-reeteil-Celeste.png";
 
 export default function AppSidebar() {
-  const navigate = useNavigate();
-
   return (
     <Sidebar
       collapsible="none"

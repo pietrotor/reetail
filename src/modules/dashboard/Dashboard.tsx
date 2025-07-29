@@ -1,13 +1,8 @@
-import { ComponentProps } from "react";
-
-import DashboardCard from "./components/dashboard-card";
 import DashboardChart from "./components/dashboard-chart";
 import DashboardHeader from "./components/dashboard-header";
 import DashboardTable from "./components/dashboard-table";
 
-import { TransactionStatus } from "@/api";
 import AuthLayout from "@/components/layouts/AuthLayout";
-import { useInvoicesKPIs } from "@/hooks/invoices/useInvoicesKPIs";
 
 const ANUAL_SALES = [
   { mes: "Enero", ventas: 2899 },
