@@ -39,7 +39,7 @@ export default function DashboardChart({
           </span>
           <p className="text-2xl font-medium">
             {integer}
-            <span className="text-base text-gray-600">,{decimal}</span>
+            <span className="text-base text-gray-600">,{decimal}</span> Bs
           </p>
         </div>
       </CardHeader>
