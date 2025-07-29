@@ -113,8 +113,8 @@ export default function ProductsTable() {
   const columns = [
     { value: "Código" },
     { value: "Producto" },
-    { value: "Detalle" },
     { value: "Stock" },
+    { value: "Estado" },
     { value: "" },
   ];
 
